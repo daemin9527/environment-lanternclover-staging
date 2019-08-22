@@ -1,0 +1,50 @@
+Step: step-credential-initializer-wsnvl:
+
+{"level":"warn","ts":1566476999.622397,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566476999.6257505,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-gz5b2:
+
+{"level":"warn","ts":1566477000.5193684,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566477000.5220823,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-daemin9527-environment-lan-8smjt:
+
+{"level":"warn","ts":1566477005.909138,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566477007.2535284,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/daemin9527/environment-lanternclover-staging.git @ e389b7af950c0d393438c224e3ffd855b1883150 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:e389b7af950c0d393438c224e3ffd855b1883150,2:20f0d4e02b48ee8a21c24f389de41c8ce56a8cdf","time":"2019-08-22T12:30:07Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 20f0d4e02b48ee8a21c24f389de41c8ce56a8cdf: e389b7af950c0d393438c224e3ffd855b1883150: in ","time":"2019-08-22T12:30:09Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-22T12:30:09Z"}
+{"level":"debug","msg":"ran git reset --hard e389b7af950c0d393438c224e3ffd855b1883150 in ","time":"2019-08-22T12:30:09Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-22T12:30:09Z"}
+MERGED SHA SUBJECT
+20f0d4e02  chore: Promote test014 to version 0.0.1
+{"level":"debug","msg":"ran git merge 20f0d4e02b48ee8a21c24f389de41c8ce56a8cdf in ","time":"2019-08-22T12:30:09Z"}
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 20f0d4e02b48ee8a21c24f389de41c8ce56a8cdf: e389b7af950c0d393438c224e3ffd855b1883150: in ","time":"2019-08-22T12:30:10Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-22T12:30:10Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-22T12:30:10Z"}
+{"level":"debug","msg":"ran git reset --hard e389b7af950c0d393438c224e3ffd855b1883150 in ","time":"2019-08-22T12:30:10Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-22T12:30:10Z"}
+{"level":"debug","msg":"ran git merge 20f0d4e02b48ee8a21c24f389de41c8ce56a8cdf in ","time":"2019-08-22T12:30:10Z"}
+MERGED SHA SUBJECT
+20f0d4e02  chore: Promote test014 to version 0.0.1
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-22T12:30:11Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-22T12:30:11Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-22T12:30:15Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-22T12:30:19Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for daemin9527-environment-lanternclover-staging-PR-2-1","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"upserted PipelineResource daemin9527-environment-lanternc for the git repository https://github.com/daemin9527/environment-lanternclover-staging.git and branch PR-2","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"upserted Task daemin9527-environment-lanternc-5fs77-from-build-pack-1","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"upserted Pipeline daemin9527-environment-lanternc-5fs77-1","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"created PipelineRun daemin9527-environment-lanternc-5fs77-1","time":"2019-08-22T12:30:21Z"}
+{"level":"info","msg":"created PipelineStructure daemin9527-environment-lanternc-5fs77-1","time":"2019-08-22T12:30:21Z"}
